@@ -1,3 +1,46 @@
+✅ Stretch Ideas (Choose any 1–2)
+
+✅ Add FP16 datapath
+✅ Support Winograd / convolution mode
+✅ Support sparse matrices
+✅ Add RISC-V integration via AXI-Lite
+✅ Produce a small compiler/driver (Python)
+
+Pick based on interest.
+
+✅ Expected Resume Line
+
+Designed a configurable N×N systolic-array matrix-multiplication accelerator in SystemVerilog; verified using cocotb + numpy golden models; implemented AXI-stream interface; synthesized using OpenLane (Sky130) achieving X MHz and Y mm²; measured throughput improvement of 15× vs software GEMM.
+✅ 3) Published Designs (optional)
+
+You can briefly compare to specs of:
+
+NVIDIA Tensor Core
+
+Google TPU v1 systolic core
+
+Qualcomm Hexagon
+
+No FPGA needed — just conceptual comparisons.
+
+6. Memory + Interfaces
+6.1 Input Buffers
+
+May hold tiles of A and B.
+
+(Initial version can use streams or preloaded arrays.)
+
+6.2 Output Buffer
+
+Collects C after complete execution.
+
+6.3 AXI Option (Stretch Goal)
+
+AXI4-Lite → control
+
+AXI4-Stream → high-speed data
+
+
                +-----------------------------+
  A_stream ---> |      Input Buffer / DMA     |
                +-----------------------------+
